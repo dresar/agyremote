@@ -1,0 +1,34 @@
+{
+  "name": "agyremote",
+  "version": "1.0.0",
+  "description": "agyremote mobile & desktop control plane UI",
+  "type": "module",
+  "scripts": {
+    "start": "cd /opt/data/home/agyremote-backend && go run ./cmd/server",
+    "dev": "vite",
+    "build": "vite build && cp -rL dist/* /opt/data/home/agyremote-backend/internal/static/dist/",
+    "build:frontend": "vite build",
+    "build:backend": "cd /opt/data/home/agyremote-backend && go build -o /tmp/agyremote-server ./cmd/server",
+    "test": "bash tests/e2e/runner.sh"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "lucide-react": "^1.61.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

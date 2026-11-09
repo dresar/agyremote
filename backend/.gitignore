@@ -1,0 +1,5 @@
+bin/
+*.log
+.env
+soul.md
+internal/static/dist/assets/
